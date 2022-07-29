@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    p 命名空间可以直接注入属性的值-->
+    <bean id="user" class="com.lcs.pojo.User" p:name="lcs" p:age="19"/>
+
+<!--    c 命名空间需要使用有参构造函数-->
+    <bean id="user2" class="com.lcs.pojo.User" c:name="lcs1" c:age="19" scope="prototype"/>
+</beans>

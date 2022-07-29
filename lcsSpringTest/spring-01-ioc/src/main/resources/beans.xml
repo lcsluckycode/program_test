@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.lcs.pojo.Address">
+        <property name="address" value="china"/>
+    </bean>
+    <bean id="student" class="com.lcs.pojo.Student">
+        <property name="name" value="lcs"/>
+<!--        引用注入 ref-->
+        <property name="address" ref="address"/>
+<!--        arrays -->
+        <property name="books">
+            <array>
+                <value>计算机组成</value>
+                <value>数据结构</value>
+            </array>
+        </property>
+<!--        list -->
+        <property name="hobbys" >
+            <list>
+                <value>movie</value>
+                <value>sing</value>
+            </list>
+        </property>
+
+        <property name="cards">
+            <map>
+                <entry key="IDCard" value="12345"/>
+                <entry key="bandCadr" value="3421847"/>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>Lu</value>
+            </set>
+        </property>
+
+        <property name="wife">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="numbers">1234</prop>
+                <prop key="name">lcs</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
